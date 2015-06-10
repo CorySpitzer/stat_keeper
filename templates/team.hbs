@@ -1,0 +1,10 @@
+<h1>Add Team</h1>
+
+<form>
+  <div class="form-group">
+    <label for="teamName">Team Name</label>
+    {{input id="teamName" class="form-control" value=teamName}}
+  </div>
+  <button class="btn btn-primary" {{action 'saveTeam'}}>Save</button>
+</form>
+<!-- {{outlet}} -->
