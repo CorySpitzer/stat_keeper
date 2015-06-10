@@ -15,7 +15,7 @@
 
     <!-- These must go above MODELS, CONTROLLERS and ROUTES -->
     <!-- They define things that they require -->
-    <script src="stats-keeper.js"></script>
+    <script src="stats.js"></script>
     <script src="router.js"></script>
     <script src="store.js"></script>
 
@@ -37,8 +37,9 @@
     // <script src="routes/recent-comments.js"></script> -->
 
     <script>
-      // EmberHandlebarsLoader.loadTemplates([
-      // ]);
+      EmberHandlebarsLoader.loadTemplates([
+        'application', 'teams'
+      ]);
     </script>
   </head>
   <body>
