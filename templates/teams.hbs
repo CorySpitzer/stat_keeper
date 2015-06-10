@@ -1,16 +1,15 @@
+
+
+<ul>
+  {{#each}}
+  <li>{{#link-to 'team' this.id}}{{teamName}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
 <div class='row'>
-
-  <ul>
-    {{#each}}
-    <li>{{teamName}}</li>
-    {{/each}}
-  </ul>
-
   <div class='col-md-6' id='team1'>
     <p>
-      {{#link-to 'new-team' classNames='btn btn-primary'}} Add Teams{{/link-to}}
     </p>
-    {{outlet}}
   </div>
 
   <div class='col-md-6' id='team2'>
@@ -18,3 +17,6 @@
     </p>
   </div>
 </div>
+
+  {{#link-to 'new-team' classNames='btn btn-primary'}} Add Teams{{/link-to}}
+  {{outlet}}

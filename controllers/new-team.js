@@ -10,6 +10,7 @@ Stats.NewTeamController = Ember.Controller.extend({
 
       newTeam1.save();
       newTeam2.save();
+
       this.transitionToRoute('teams');
     }
   }
