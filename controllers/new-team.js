@@ -1,4 +1,4 @@
-Stats.TeamController = Ember.Controller.extend({
+Stats.NewTeamController = Ember.Controller.extend({
   actions: {
     saveTeam: function() {
       var newTeam = this.store.createRecord('team', {

@@ -1,7 +1,14 @@
 <div class='row'>
+
+  <ul>
+    {{#each}}
+    <li>{{teamName}}</li>
+    {{/each}}
+  </ul>
+
   <div class='col-md-6' id='team1'>
     <p>
-      {{#link-to 'team' classNames='btn btn-primary'}} Add Team{{/link-to}}
+      {{#link-to 'new-team' classNames='btn btn-primary'}} Add Team{{/link-to}}
     </p>
     {{outlet}}
   </div>

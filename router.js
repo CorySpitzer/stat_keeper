@@ -1,5 +1,5 @@
 Stats.Router.map(function() {
   this.resource('teams', {path: '/'}, function() {
-    this.resource('team');
+    this.resource('new-team');
   });
 });
