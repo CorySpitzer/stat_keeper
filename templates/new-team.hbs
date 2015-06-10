@@ -1,10 +1,12 @@
-<h1>Add Team</h1>
+<h1>Add Teams</h1>
 
 <form>
   <div class="form-group">
-    <label for="teamName">Team Name</label>
-    {{input id="teamName" class="form-control" value=teamName}}
+    <label for="teamName1">Team 1 Name</label>
+    {{input id="teamName1" class="form-control" value=teamName1 required='required'}}
+    <label for="teamName2">Team 2 Name</label>
+    {{input id="teamName2" class="form-control" value=teamName2 required='required'}}
   </div>
-  <button class="btn btn-primary" {{action 'saveTeam'}}>Save</button>
+  <button class="btn btn-primary" {{action 'saveTeams'}}>Save</button>
 </form>
 <!-- {{outlet}} -->
