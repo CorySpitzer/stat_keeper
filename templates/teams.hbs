@@ -1,22 +1,34 @@
-
-
-<ul>
-  {{#each}}
-  <li>{{#link-to 'team' this.id}}{{teamName}}{{/link-to}}</li>
-  {{/each}}
-</ul>
+<div id='add-team'>
+  {{#link-to 'new-team' classNames='btn btn-primary'}} Add Teams{{/link-to}}
+  {{outlet}}
+</div>
 
 <div class='row'>
-  <div class='col-md-6' id='team1'>
-    <p>
-    </p>
-  </div>
+  <ul>
+    {{#each}}
+      <div class='col-md-6'>
+        <li>{{#link-to 'team' this.id}}{{teamName}}{{/link-to}}</li>
+        <!-- each player -->
+          <ul>
+              <li>A player</li>
+          </ul>
+          <br>
+          <div id="add-player-form">
+            <form class="save-player">
+              <label for="newPlayer">New Player</label>
+              {{input id="newPlayer" class="form-control" value=playerName required='required'}}
+              <!-- <br> -->
+              <button class="btn btn-warning" {{action 'addPlayer'}}>Save</button>
+            </form>
+          </div>
+      </div>
+    {{/each}}
+  </ul>
+</div>
+
+  <!--
 
   <div class='col-md-6' id='team2'>
     <p>
     </p>
-  </div>
-</div>
-
-  {{#link-to 'new-team' classNames='btn btn-primary'}} Add Teams{{/link-to}}
-  {{outlet}}
+  </div> -->
